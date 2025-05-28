@@ -1,0 +1,164 @@
+
+<!doctype html>
+<html lang="tr">
+
+<!-- Mirrored from hexnox.pro/login by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 27 May 2025 20:47:15 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="utf-8" />
+    <title>SowiXlogin</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="assets/images/favicon.ico">
+    <link id="bootstrap-style" href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link id="app-style" href="assets/css/app.min.css" rel="stylesheet" type="text/css" />
+    <link href="assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+    <script src="assets/js/plugin.js" defer></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.0.1/css/toastr.css" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.0.1/js/toastr.js" defer></script>
+
+    <style>
+        body {
+            margin: 0;
+            background: url('https://images.hdqwalls.com/download/wonder-woman-justice-champion-w2-1920x1080.jpg') no-repeat center center fixed;
+            background-size: cover;
+            overflow: hidden;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animated {
+            animation: fadeInUp 0.5s ease forwards;
+        }
+
+        .btn {
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #ff6f61;
+            transform: scale(1.05);
+        }
+
+        .copy-button {
+            cursor: pointer;
+            background: none;
+            border: none;
+            color: #007bff;
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body data-bs-theme="dark">
+    <div class="account-pages my-5 pt-sm-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-8 col-lg-6 col-xl-5">
+                    <div class="card overflow-hidden">
+                        <div class="bg-primary-subtle">
+                            <div class="row">
+                                <div class="col-7">
+                                    <div class="text-primary p-4">
+                                        <h5 class="text-primary">Hoş geldin!</h5>
+                                        <p>Bu panel tamamen bedavdır size satmaya çalışan kişilere dikkat edin.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body pt-0">
+                            <div class="auth-logo">
+                                <a class="auth-logo-light">
+                                    <div class="avatar-md profile-user-wid mb-4">
+                                        <span class="avatar-title rounded-circle bg-light">
+                                            <img src="assets/images/sowix.png" id="maymun-image" alt="" class="rounded-circle" height="50">
+                                        </span>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="p-2">
+                                <form class="form-horizontal" action="#" method="post">
+                                    <div class="mb-3">
+                                        <label class="form-label" style="font-size: 18px; font-weight: bold; color: #007bff;">
+                                            (admin key: <span id="keyText">sowixpro</span>)
+                                        </label>
+                                        <div class="input-group auth-pass-inputgroup">
+                                            <input type="password" class="form-control animated" id="key" name="key"
+                                                placeholder="Örnek: sowixpro" aria-label="Password"
+                                                aria-describedby="password-addon" autocomplete="new-password">
+                                            <button class="btn btn-light copy-button" id="copyButton" type="button">
+                                                <i class="fas fa-copy"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" id="remember-check">
+                                        <label class="form-check-label" for="remember-check">
+                                            Beni hatırla
+                                        </label>
+                                    </div>
+
+                                    <div class="mt-3 d-grid">
+                                        <button class="btn btn-primary waves-effect waves-light animated" name="giris"
+                                            type="submit">Giriş</button>
+                                    </div>
+
+                                    <div class="mt-5 text-center">
+                                        <div>Hesabın yok mu? <a href="https://t.me/+tlHMs5xPH6IxM2Jh"
+                                                class="fw-medium text-primary"> Kayıt ol </a> </div>
+                                    </div>
+
+                                                                    </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JS Kitaplıklar -->
+    <script src="assets/libs/jquery/jquery.min.js"></script>
+    <script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/libs/metismenu/metisMenu.min.js"></script>
+    <script src="assets/libs/simplebar/simplebar.min.js"></script>
+    <script src="assets/libs/node-waves/waves.min.js"></script>
+    <script src="assets/libs/toastr/build/toastr.min.js"></script>
+    <script src="assets/js/app.js"></script>
+    <script src="assets/js/pages/toastr.init.js"></script>
+
+    <!-- Kopyalama Butonu -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const copyBtn = document.getElementById('copyButton');
+            const keyText = document.getElementById('keyText');
+
+            if (copyBtn && keyText) {
+                copyBtn.addEventListener('click', function () {
+                    const tempInput = document.createElement('input');
+                    tempInput.value = keyText.innerText;
+                    document.body.appendChild(tempInput);
+                    tempInput.select();
+                    document.execCommand('copy');
+                    document.body.removeChild(tempInput);
+                    toastr.success('Anahtar kopyalandı!', 'Başarılı');
+                });
+            }
+        });
+    </script>
+</body>
+<script>
+    alert("hacked by h4cktickl - Lamer panelciler :)");
+</script>
+<!-- Mirrored from hexnox.pro/login by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 27 May 2025 20:47:29 GMT -->
+  </html>
+                                              
